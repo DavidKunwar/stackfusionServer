@@ -4,7 +4,7 @@ To install the dependencies
 
 Run the project using the following command : 
 
-### `npm start`
+### `nodemon server.js`
 
 Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser. It will display "Hello World"
+Open [http://localhost:3001](http://localhost:3001) to view it in your browser. It will display "Hello World!"
