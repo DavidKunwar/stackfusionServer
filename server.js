@@ -11,7 +11,6 @@ const app = express()
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors({
-    origin: ['http://localhost:3000'],
     methods: ['POST'],
     credentials: true
 }))
@@ -119,6 +118,12 @@ app.get('/read-forms', function(req, res){
     })
 })
 
-app.listen(3001, function(){
-    console.log('Server up and running on PORT : 3001')
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3001;
+}
+
+app.listen(port, function(){
+    console.log(`Server up and running on PORT : ${port}`)
 })
